@@ -1,0 +1,61 @@
+<!doctype html>
+<html ng-app="myApp">
+    <head>
+        <title>angular test</title>
+    </head>
+    <body>
+        <h1>Hello Angular</h1>
+        
+        <hello-world back-color="#dedede">
+            <b>Angular!</b>
+        </hello-world>
+<!--    <div hello-world></div>-->
+        
+        
+        
+<!--    le direttive dovrebbero essere cosi
+
+        <menu orientation="horizontal" theme="dark">
+            <menu-item title="menu" path="/"></menu-item>
+            <menu-item title="About" path="/about"></menu-item>
+        </menu> -->
+        
+<!--
+        <div ng-controller="CalculatorController as calculator">
+            
+            <input ng-model="query" focus>
+
+            <table>
+                <tr ng-repeat="phone in calculator.phones | filter:query ">
+                    <td>{{phone.name | reverse}}</td>
+                    <td>{{phone.price}}</td>
+                </tr>
+            </table>
+            <p>you ({{calculator.id | uppercase}}), {{calculator.seconds}}</p>
+            
+            <input ng-model="calculator.x" /> + <input ng-model="calculator.y" />
+            <button ng-click="calculator.add(calculator.x, calculator.y)">=</button>
+            <span>{{calculator.sum | currency: '$': 3}}</span>
+        </div>
+-->
+        
+        <p>
+            <a ui-sref="calculator">Calculator</a> |
+            <a ui-sref="about">About</a>
+        </p>
+        
+<!--        main ng-view but made by angular-ui-->
+        <div ui-view></div>
+        
+        <div ng-include="'footer.html'"></div>
+        
+        <script src="/jquery-1.11.1.min.js"></script>
+        <script src="/node_modules/angular/angular.js"></script>
+        <script src="/node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="/build/bundled.js"></script>
+<!--
+        <script src="/index.js"></script>
+        <script src="/CalculatorController.js"></script>
+-->
+    </body>
+</html>

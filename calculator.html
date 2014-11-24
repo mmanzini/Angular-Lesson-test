@@ -1,0 +1,16 @@
+<!--<div ng-controller="CalculatorController as calculator">-->
+<div>
+    <input ng-model="query" focus>
+
+    <table>
+        <tr ng-repeat="phone in calculator.phones | filter:query ">
+            <td>{{phone.name | reverse}}</td>
+            <td>{{phone.price}}</td>
+        </tr>
+    </table>
+    <p>you ({{calculator.id | uppercase}}), {{calculator.seconds}}</p>
+
+    <input ng-model="calculator.x" /> + <input ng-model="calculator.y" />
+    <button ng-click="calculator.add(calculator.x, calculator.y)">=</button>
+    <span>{{calculator.sum | currency: '$': 3}}</span>
+</div>
